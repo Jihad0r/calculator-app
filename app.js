@@ -34,14 +34,17 @@ on.addEventListener("click", () => {
   if (screenResult.querySelector("p").style.display === "block") {
     screenResult.querySelector("p").style.display = "none";
     screenResult.querySelector("span").style.display = "flex";
+    signs.style.display = "none";
   } else {
     screenResult.querySelector("p").style.display = "block";
     screenResult.querySelector("span").style.display = "none";
+    signs.style.display = "block";
   }
 });
 reset.addEventListener("click", () => {
   screenResult.querySelector("p").textContent = "";
   screenResult.querySelector("p").style.display = "none";
+  signs.style.display = "none";
   screenResult.querySelector("span").style.display = "flex";
 });
 let nums = [];
