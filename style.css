@@ -1,0 +1,299 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+.background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: hsl(222, 26%, 31%);
+  color: hsl(224, 28%, 35%);
+  transition: 1s;
+}
+.background.theme_two {
+  background-color: hsl(0, 0%, 90%);
+}
+.background.theme_three {
+  background-color: hsl(268, 75%, 9%);
+}
+.container {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 30%;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-weight: bold;
+  transition: 1s;
+}
+.head.theme_two {
+  color: hsl(223, 31%, 20%);
+}
+.head.theme_three {
+  color: hsl(52, 100%, 62%);
+}
+.theme {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.theme p {
+  font-size: 10px;
+  margin-right: 15%;
+}
+.slider {
+  -webkit-appearance: none;
+  position: relative;
+  width: 20%;
+  height: 8px;
+  background: hsl(224, 36%, 15%);
+  border-radius: 5px;
+  padding: 5px 5px;
+  outline: none;
+  opacity: 0.9;
+  border-radius: 10px;
+  transition: opacity 0.2s;
+}
+.slider.theme_two {
+  background-color: hsl(0, 0%, 93%);
+}
+.slider.theme_three {
+  background-color: hsl(268, 71%, 12%);
+}
+.slider.theme_two::before {
+  color: hsl(60, 10%, 19%);
+}
+.slider.theme_three::before {
+  color: hsl(52, 100%, 62%);
+}
+.slider::before {
+  content: "1 2 3";
+  position: absolute;
+  top: -100%;
+  color: white;
+  letter-spacing: 1px;
+}
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background: hsl(6, 70%, 34%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  background: hsl(6, 63%, 50%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider.theme_three::-moz-range-thumb {
+  background: hsl(176, 100%, 44%);
+}
+.slider.theme_three::-webkit-slider-thumb {
+  background: hsl(176, 100%, 44%);
+}
+.slider::-moz-range-thumb:hover {
+  background: hsl(6, 63%, 70%);
+}
+.slider::-webkit-slider-thumb:hover {
+  background: hsl(6, 70%, 74%);
+}
+.slider.theme_two::-moz-range-thumb:hover {
+  background: hsl(6, 70%, 54%);
+}
+.slider.theme_two::-webkit-slider-thumb:hover {
+  background: hsl(6, 70%, 54%);
+}
+.slider.theme_three::-moz-range-thumb:hover {
+  background: hsl(176, 100%, 74%);
+}
+.slider.theme_three::-webkit-slider-thumb:hover {
+  background: hsl(176, 100%, 74%);
+}
+div.result.theme_two {
+  background-color: hsl(0, 0%, 93%);
+  color: hsl(60, 10%, 19%);
+}
+div.result.theme_three {
+  background-color: hsl(268, 71%, 12%);
+  color: hsl(52, 100%, 62%);
+}
+div.result p {
+  margin: 0;
+  display: none;
+}
+div.result > span {
+  font-size: 10px;
+  opacity: 0.7;
+  letter-spacing: 3px;
+  display: flex;
+  justify-content: end;
+  margin-top: 3.5%;
+}
+div.result {
+  position: relative;
+  background-color: hsl(224, 36%, 15%);
+  padding: 15px 10px;
+  color: hsl(0, 0%, 100%);
+  height: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-align: right;
+  transition: 1s;
+}
+.signs {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  font-size: 10px;
+  letter-spacing: 12px;
+  opacity: 0.5;
+}
+.btns {
+  background-color: hsl(223, 31%, 20%);
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: 1s;
+}
+.btns.theme_two {
+  background-color: hsl(0, 5%, 81%);
+}
+.btns .reset.theme_two {
+  background-color: hsl(185, 42%, 37%);
+  box-shadow: 0px 2px hsl(185, 58%, 25%);
+}
+.btns .open.theme_two {
+  background-color: hsl(185, 42%, 37%);
+  box-shadow: 0px 2px hsl(185, 58%, 25%);
+}
+.btns .result.theme_two {
+  background-color: hsl(25, 98%, 40%);
+  box-shadow: 0px 2px hsl(25, 99%, 27%);
+}
+.btns.theme_two p {
+  background-color: hsl(45, 7%, 89%);
+  box-shadow: 0px 2px hsl(35, 11%, 61%);
+}
+/* as */
+.btns.theme_three {
+  background-color: hsl(268, 71%, 12%);
+}
+.btns .reset.theme_three {
+  background-color: hsl(268, 47%, 21%);
+  box-shadow: 0px 2px hsl(290, 70%, 36%);
+}
+.btns .open.theme_three {
+  background-color: hsl(268, 47%, 21%);
+  box-shadow: 0px 2px hsl(290, 70%, 36%);
+}
+.btns .result.theme_three {
+  background-color: hsl(176, 100%, 44%);
+  box-shadow: 0px 2px hsl(177, 92%, 70%);
+  color: hsl(198, 20%, 13%);
+}
+.btns.theme_three p {
+  background-color: hsl(281, 89%, 26%);
+  box-shadow: 0px 2px hsl(285, 91%, 52%);
+  color: hsl(52, 100%, 62%);
+}
+.btns p {
+  background-color: hsl(30, 25%, 89%);
+  box-shadow: 0px 2px hsl(28, 16%, 65%);
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 1s;
+}
+.btns .open {
+  background-color: hsl(225, 21%, 49%);
+  box-shadow: 0px 2px hsl(224, 28%, 35%);
+  color: white;
+  transition: 1s;
+}
+.btns .reset {
+  grid-column: 1/3;
+  background-color: hsl(225, 21%, 49%);
+  box-shadow: 0px 2px hsl(224, 28%, 35%);
+  color: white;
+  transition: 1s;
+}
+.btns .result {
+  grid-column: 3/5;
+  background-color: hsl(6, 63%, 50%);
+  box-shadow: 0px 2px hsl(6, 70%, 34%);
+  color: white;
+  transition: 1s;
+}
+.btns p:hover {
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0px 2px hsl(10, 3%, 80%);
+}
+.btns .open:hover {
+  background-color: hsl(225, 21%, 69%);
+  box-shadow: 0px 2px hsl(224, 28%, 55%);
+}
+.btns .reset:hover {
+  background-color: hsl(225, 21%, 69%);
+  box-shadow: 0px 2px hsl(224, 28%, 55%);
+}
+.btns .result:hover {
+  background-color: hsl(6, 63%, 70%);
+  box-shadow: 0px 2px hsl(6, 70%, 54%);
+}
+
+.btns .reset.theme_two:hover {
+  background-color: hsl(185, 42%, 57%);
+  box-shadow: 0px 2px hsl(185, 58%, 15%);
+}
+.btns .open.theme_two:hover {
+  background-color: hsl(185, 42%, 57%);
+  box-shadow: 0px 2px hsl(185, 58%, 15%);
+}
+.btns .result.theme_two:hover {
+  background-color: hsl(25, 98%, 60%);
+  box-shadow: 0px 2px hsl(25, 99%, 7%);
+}
+.btns.theme_two p:hover {
+  background-color: hsl(45, 7%, 100%);
+  box-shadow: 0px 2px hsl(35, 11%, 41%);
+}
+
+.btns .reset.theme_three:hover {
+  background-color: hsl(268, 47%, 41%);
+  box-shadow: 0px 2px hsl(290, 70%, 56%);
+}
+.btns .open.theme_three:hover {
+  background-color: hsl(268, 47%, 41%);
+  box-shadow: 0px 2px hsl(290, 70%, 56%);
+}
+.btns .result.theme_three:hover {
+  background-color: hsl(176, 100%, 64%);
+  box-shadow: 0px 2px hsl(177, 92%, 90%);
+  color: hsl(198, 20%, 13%);
+}
+.btns.theme_three p:hover {
+  background-color: hsl(281, 89%, 46%);
+  box-shadow: 0px 2px hsl(285, 91%, 72%);
+  color: hsl(52, 100%, 62%);
+}
